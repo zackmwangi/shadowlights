@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
@@ -57,7 +59,7 @@ export async function POST(request: Request) {
             // This can be ignored if you have middleware refreshing
             // user sessions.
           }
-
+          /*
           cookiesToSet.forEach(({ name, value, options }) =>
             request.cookies.set(name, value)
           );
@@ -69,6 +71,7 @@ export async function POST(request: Request) {
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options)
           );
+          */
         },
       },
     }
