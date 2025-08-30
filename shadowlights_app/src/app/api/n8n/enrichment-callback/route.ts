@@ -4,7 +4,6 @@ import { createServerClient, type CookieOptions } from "@supabase/ssr";
 
 export async function POST(request: NextRequest) {
  
-
     const cookieStore = await cookies();
   
     const supabase = createServerClient(
