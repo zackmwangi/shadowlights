@@ -1,16 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 'use client'
 
 import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import parse from 'html-react-parser'
 
+
+
 interface Task {
   id: string;
   title: string;
   is_complete: boolean;
-  description: string | null;
-  title_enriched: string | null;
-  description_enriched: string | null;
+  description: string | "";
+  title_enriched: string | "";
+  description_enriched: string | "";
 }
 
 export default function Home() {
