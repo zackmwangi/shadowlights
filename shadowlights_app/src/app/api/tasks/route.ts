@@ -149,7 +149,7 @@ export async function PUT(request: Request) {
             // This can be ignored if you have middleware refreshing
             // user sessions.
           }
-
+          /*
           cookiesToSet.forEach(({ name, value, options }) =>
             request.cookies.set(name, value)
           );
@@ -161,6 +161,7 @@ export async function PUT(request: Request) {
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options)
           );
+          */
         },
       },
     }
@@ -220,7 +221,7 @@ export async function DELETE(request: Request) {
             // This can be ignored if you have middleware refreshing
             // user sessions.
           }
-
+          /*
           cookiesToSet.forEach(({ name, value, options }) =>
             request.cookies.set(name, value)
           );
@@ -232,6 +233,7 @@ export async function DELETE(request: Request) {
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options)
           );
+          */
         },
       },
     }
