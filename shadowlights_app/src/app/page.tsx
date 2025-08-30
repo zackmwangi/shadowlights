@@ -4,13 +4,6 @@ import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import parse from 'html-react-parser'
 
-//import { useRouter } from "next/navigation";
-//import Router from "next/router";
-
-//import { createServerClient, type CookieOptions } from "@supabase/ssr";
-import { uuid } from './../../node_modules/@supabase/supabase-js/dist/module/lib/helpers';
-
-
 interface Task {
   id: string;
   title: string;
