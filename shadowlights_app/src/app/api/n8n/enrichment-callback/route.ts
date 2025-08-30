@@ -3,12 +3,7 @@ import { cookies } from "next/headers";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 
 export async function POST(request: NextRequest) {
-  /*
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  )
-  */
+ 
 
     const cookieStore = await cookies();
   
@@ -35,16 +30,7 @@ export async function POST(request: NextRequest) {
               request.cookies.set(name, value)
             );
 
-            /*
-            supabaseResponse = NextResponse.next({
-              request,
-            });
-  
-            cookiesToSet.forEach(({ name, value, options }) =>
-              supabaseResponse.cookies.set(name, value, options)
-            );
-            */
-           
+
           },
         },
       }
@@ -52,14 +38,6 @@ export async function POST(request: NextRequest) {
   
 
   try {
-    //const { taskId, description, userId } = await request.json()
-    /*
-    console.log("#########################");
-    const reqB = await request.json();
-
-    console.log("the body: "+reqB);
-    console.log("#########################");
-    */
   
     //const { task_id, user_id, title_enriched, description_enriched, output }  = reqB;
     const { task_id, user_id, title_enriched, description_enriched, output }  = await request.json();
